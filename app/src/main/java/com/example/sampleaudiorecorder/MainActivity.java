@@ -62,25 +62,25 @@ public class MainActivity extends AppCompatActivity {
                 recorder.release();
                 recorder = null;
 
-//                ContentValues values = new ContentValues(10);
-//
-//                values.put(MediaStore.MediaColumns.TITLE, "Recorded");
-//                values.put(MediaStore.Audio.Media.ALBUM, "Audio Album");
-//                values.put(MediaStore.Audio.Media.ARTIST, "Mike");
-//                values.put(MediaStore.Audio.Media.DISPLAY_NAME, "Recorded Audio");
-//                values.put(MediaStore.Audio.Media.IS_RINGTONE, 1);
-//                values.put(MediaStore.Audio.Media.IS_MUSIC, 1);
-//                values.put(MediaStore.MediaColumns.DATE_ADDED, System.currentTimeMillis()/1000);
-//                values.put(MediaStore.MediaColumns.MIME_TYPE, "audio/mp4");  // 미디어파일의 포
-//                values.put(MediaStore.Audio.Media.DATA, RECORDED_FILE);  // 녹음 파일의 이름을 지정
-//
-//                // ContentValues 객체에 넣은 정보들을 insert()메소드로 추가
-//                // 미디어 앨범에서 음성파일에 대한 내용 제공자는 Uri 형식
-//               Uri audioUri = getContentResolver().insert(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, values);
-//                if (audioUri == null) {
-//                    Log.d("SampleAudioRecorder", "Audio insert failed.");
-//                    return;
-//                }
+                ContentValues values = new ContentValues(10);
+
+                values.put(MediaStore.MediaColumns.TITLE, "Recorded");
+                values.put(MediaStore.Audio.Media.ALBUM, "Audio Album");
+                values.put(MediaStore.Audio.Media.ARTIST, "Mike");
+                values.put(MediaStore.Audio.Media.DISPLAY_NAME, "Recorded Audio");
+                values.put(MediaStore.Audio.Media.IS_RINGTONE, 1);
+                values.put(MediaStore.Audio.Media.IS_MUSIC, 1);
+                values.put(MediaStore.MediaColumns.DATE_ADDED, System.currentTimeMillis()/1000);
+                values.put(MediaStore.MediaColumns.MIME_TYPE, "audio/mp4");  // 미디어파일의 포
+                values.put(MediaStore.Audio.Media.DATA, RECORDED_FILE);  // 녹음 파일의 이름을 지정
+
+                // ContentValues 객체에 넣은 정보들을 insert()메소드로 추가
+                // 미디어 앨범에서 음성파일에 대한 내용 제공자는 Uri 형식
+               Uri audioUri = getContentResolver().insert(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, values);
+                if (audioUri == null) {
+                    Log.d("SampleAudioRecorder", "Audio insert failed.");
+                    return;
+                }
             }
         });
 
